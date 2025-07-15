@@ -1,0 +1,18 @@
+[project]
+name = "cubed-test"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cubed[diagnostics]>=0.21.0",
+    "cupy-cuda12x>=13.5.1",
+]
+
+[dependency-groups]
+dev = [
+    "ipython>=9.4.0",
+]
+
+[tool.uv.sources]
+cubed = { git = "https://github.com/TomAugspurger/cubed", branch = "twa/cupy-compat" }
