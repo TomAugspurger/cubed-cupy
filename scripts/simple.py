@@ -5,18 +5,10 @@ https://cubed-dev.github.io/cubed/examples/basic-array-ops.html
 
 This required patching backend_array_api to not convert to numpy.
 """
-import cupy
 
-# TODO: Check on status of bool vs. bool_ in cupy
-
-cupy.bool = cupy.bool_
-
-
-import cubed
 import zarr
 
 import cubed.array_api as xp
-
 
 zarr.config.enable_gpu()
 

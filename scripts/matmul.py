@@ -1,11 +1,4 @@
 # https://cubed-dev.github.io/cubed/examples/basic-array-ops.html#matmul
-import cupy
-
-# the array API uses bool, not bool_
-# TODO: Check on status in cupy
-
-cupy.bool = cupy.bool_
-
 import cubed
 import cubed.array_api as xp
 import cubed.random

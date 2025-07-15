@@ -4,7 +4,7 @@ Some experiments at running cubed with a GPU (via cupy).
 
 ## Issues
 
-- cupy's main namespace isn't compatible with the array-api spec? (`cupy.bool`). Need to check on that.
+- cupy's main namespace isn't compatible with the array-api spec? (`cupy.bool`). Need to check on that. A workaround is to patch `cupy` to set `cupy.bool = cupy.bool_`. Alternatively, use `array_api_compat.cupy`
 - cubed casts to a numpy array, assuming it's cheap. We ~never want to do that with GPU data.
 
 Hence the changes at https://github.com/TomAugspurger/cubed/tree/twa/cupy-compat
